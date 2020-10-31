@@ -162,7 +162,6 @@ class _BlocProviderState<B extends Cubit<dynamic>>
       child: child ?? widget.child,
       bloc: _bloc,
       create: () {
-        if (_bloc != null) setState(() {});
         _bloc ??= widget.create(context);
         return _bloc;
       },

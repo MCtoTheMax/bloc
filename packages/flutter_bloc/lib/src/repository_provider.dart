@@ -98,7 +98,6 @@ class _RepositoryProviderState<T>
   Widget buildWithChild(BuildContext context, Widget child) {
     return _InheritedRepository(
       create: () {
-        if (_repository != null) setState(() {});
         _repository ??= widget.create(context);
         return _repository;
       },
